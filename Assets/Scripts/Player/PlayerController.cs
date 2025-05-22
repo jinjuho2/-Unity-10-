@@ -6,9 +6,9 @@ using UnityEngine.InputSystem;
 public class PlayerController : BaseController<Player>
 {
     private Player player;
-
     public Vector3 inputDir;
     public int rayDistance = 2;
+
 
     public PlayerController(State<Player> initState, Player player) : base(initState, player)
     {
@@ -51,6 +51,8 @@ public class PlayerController : BaseController<Player>
 
         return false;
     }
+
+    
 
 
 }

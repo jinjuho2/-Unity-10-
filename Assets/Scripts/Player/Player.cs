@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using Enums;
+using System;
 
 public class Player : MonoBehaviour
 {
     private PlayerController Controller { get { return controller; } }
     public PlayerController controller;
-
+    
+    public InteractionController interactionController;
     public Rigidbody rb;
+    
+    public ItemData itemData;
+    public Action addItem;
 
     public PlayerStat playerStat;
 
     public Animator playerAnime;
-
 
     private void Awake()
     {
@@ -36,6 +40,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         playerStat = GetComponent<PlayerStat>();
         playerAnime = GetComponentInChildren<Animator>();
+        interactionController = GetComponent<InteractionController>();
         ControllerRegiser();
     }
 

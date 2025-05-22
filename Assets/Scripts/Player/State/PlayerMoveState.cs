@@ -18,7 +18,7 @@ public class PlayerMoveState : PlayerStates
 
     public override void OnEnter()
     {
-        base.OnEnter();
+       base.OnEnter();
        player.playerAnime.SetBool("WalkForward", true);
     }
 

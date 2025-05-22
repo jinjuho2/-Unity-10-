@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 413257259646934724}
   - component: {fileID: 2569899610611722920}
   - component: {fileID: 1355448641069384888}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1923251407844793258}
   - component: {fileID: 2110762893052512768}
   - component: {fileID: 7008524758353004843}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Item_Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,8 +112,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.927, y: 1.719, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 413257259646934724}
   m_Father: {fileID: 0}

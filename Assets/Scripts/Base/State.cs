@@ -14,7 +14,7 @@ public class State<T> where T : MonoBehaviour
     public virtual void OnEnter()
     {
         elapsedTime = 0;
-        Debug.Log("State Entered: " + this.GetType().Name);
+        //Debug.Log("State Entered: " + this.GetType().Name);
     }
 
     public virtual void OnExit() { }

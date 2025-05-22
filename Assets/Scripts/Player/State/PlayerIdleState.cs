@@ -24,6 +24,7 @@ public class PlayerIdleState : PlayerStates
     public override void OnUpdate(float deltaTime)
     {
         base.OnUpdate(deltaTime);
+        player.interactionController.IsInteract();
 
         if (player.controller.Move() != Vector3.zero)
         {
@@ -37,7 +38,12 @@ public class PlayerIdleState : PlayerStates
             return;
         }
 
-
+        if (Input.GetKeyDown(KeyCode.F) && player.interactionController.curInteractable != null)
+        {
+            player.interactionController.InteractInput(player);
+            Debug.Log("Get");
+            return;
+        }
     }
 
     public override void OnExit()
