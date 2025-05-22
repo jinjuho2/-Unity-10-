@@ -1,8 +1,20 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemObject : MonoBehaviour
+public class ItemObject : MonoBehaviour , IInteractable
 {
-    public BaseData BaseData;
+    public ItemData itemData;
+
+    public string GetInteracePrompt()
+    {
+        string str = $"{itemData.displayName} \n {itemData.description}";
+        return str;
+    }
+
+    public void OnInteract()
+    {
+        //
+    }
 }
