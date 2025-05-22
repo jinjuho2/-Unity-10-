@@ -38,21 +38,22 @@ public class Player : MonoBehaviour
         playerAnime = GetComponentInChildren<Animator>();
         ControllerRegiser();
     }
+
     public void ControllerRegiser()
     {
         controller = new PlayerController(new PlayerIdleState(), this);
         controller.RegistedState(new PlayerMoveState(), this);
+        controller.RegistedState(new PlayerJumpState(), this);
     }
 
-    //public void ChangeAnime(PlayerState nextAnime)
-    //{
-    //    if (nextAnime == PlayerState.Death)
-    //    {
-    //        playerAnime.SetTrigger("Death");
-    //    }
-    //    else
-    //    {
-    //        playerAnime.SetInteger("ChangeState",(int)nextAnime);
-    //    }
-    //}
+    public void Get()
+    {
+        Destroy(gameObject);
+    }
+
+    
+
+    
+
+   
 }

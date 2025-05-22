@@ -19,8 +19,7 @@ public class PlayerMoveState : PlayerStates
     public override void OnEnter()
     {
         base.OnEnter();
-        
-            player.playerAnime.SetBool("WalkForward", true);
+       player.playerAnime.SetBool("WalkForward", true);
     }
 
     public override void OnUpdate(float deltaTime)
@@ -34,8 +33,14 @@ public class PlayerMoveState : PlayerStates
         if (curMovemenetInput == Vector3.zero)
         {
             player.controller.ChangeState(nameof(PlayerIdleState));
-            player.playerAnime.SetBool("WalkForward", false);
-            player.playerAnime.SetBool("WalkBackward", false);
+
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && player.controller.IsGround())
+        {
+            player.controller.ChangeState(nameof(PlayerJumpState));
+            return;
         }
     }
 
