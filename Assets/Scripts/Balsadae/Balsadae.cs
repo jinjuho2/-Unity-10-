@@ -10,7 +10,7 @@ public class Balsadae : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.rigidbody.AddForce(Vector3.up * 50, ForceMode.Impulse);
+            collision.rigidbody.AddForce(Vector3.up * 20, ForceMode.Impulse);
         }
     }
 
