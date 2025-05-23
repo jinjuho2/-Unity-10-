@@ -51,14 +51,28 @@ public class Inventory : MonoBehaviour
 
     public void UseItem(Player player)
     {
-
+        if (slots[0].item != null)
+        {
+            slots[0].Clear();
+            
+            StartCoroutine(SpeedUp(player));
+        }
+        else if (slots[1].item != null) 
+        {
+            slots[1].Clear();
+            StartCoroutine(SpeedUp(player));
+        }
+        else
+            Debug.Log("사용할 아이템 없음");
     }
+
+
 
     ItemSlot GetItemStack(ItemData data)
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            if (slots[i].item == data )
+            if (slots[i].item == data)
             {
                 return slots[i];
             }
@@ -90,5 +104,14 @@ public class Inventory : MonoBehaviour
             }
         }
         return null;
+    }
+
+    IEnumerator SpeedUp(Player player)
+    {
+        player.playerStat.moveSpeed = 15f;
+
+        yield return new WaitForSeconds(3);
+
+        player.playerStat.moveSpeed = 5f;
     }
 }

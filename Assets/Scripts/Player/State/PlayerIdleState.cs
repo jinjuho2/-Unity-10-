@@ -45,9 +45,9 @@ public class PlayerIdleState : PlayerStates
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            player.interactionController
+            player.inventory.UseItem(player);
         }
     }
 
