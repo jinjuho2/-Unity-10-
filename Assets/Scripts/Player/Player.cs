@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 {
     private PlayerController Controller { get { return controller; } }
     public PlayerController controller;
-    
+    public Inventory inventory;
     public InteractionController interactionController;
     public Rigidbody rb;
     

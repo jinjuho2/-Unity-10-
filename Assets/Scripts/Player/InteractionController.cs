@@ -17,7 +17,7 @@ public class InteractionController : MonoBehaviour
     public TextMeshProUGUI promptText;
     public Camera camera;
 
-
+    
 
     public void IsInteract()
     {
@@ -60,6 +60,7 @@ public class InteractionController : MonoBehaviour
             curInteractGameObject = null;
             curInteractable = null;
             promptText.gameObject.SetActive(false);
+            player.inventory.AddItem(player);
     }
 
 }

@@ -44,6 +44,11 @@ public class PlayerIdleState : PlayerStates
             Debug.Log("Get");
             return;
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            player.interactionController
+        }
     }
 
     public override void OnExit()
